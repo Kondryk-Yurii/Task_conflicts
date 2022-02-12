@@ -1,0 +1,44 @@
+ESC -> :wq
+
+*************************  Case 1  *************************
+
+user1, user2 добавляют в каталог файл  index.html
+
+
+============================  User 1 =============
+1. Сделать commit  
+3. Залить изменения  на Github-repo
+      git push -u origin master
+
+
+============================  User 2 =============
+1. Вносит изменения в файл  index.html
+////  ------------------------- 🖍  index.html
+<ul class="menu">
+	<li><a href="#">Main page</a></li>
+	<li><a href="#">Products</a></li>
+	<li><a href="#">Contacts</a></li>
+	<li><a href="#">About us</a></li>
+</ul>
+--------------------------------------------- ////
+2. Сделать commit  
+
+3. Делает попытку получить изменения  с Github-repo
+      git pull
+
+и получает  CONFLICT c  сообщениеv
+    CONFLICT (content) Merge conflict in cat.html
+    Aitomatic merge failed, fix conflict and commit the result
+
+
+4. Устраняет CONFLICT
+5. Выполняет
+		git commit -am "......"
+            git push origin master
+
+
+============================  User 1 =============
+1. Выполнить
+    git pull
+
+
